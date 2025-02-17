@@ -1,0 +1,69 @@
+POST http://localhost:3000/users/register/
+Content-Type: application/json
+
+{
+    "name":"suresh",
+    "email":"sureshnayak6695@gmail.com",
+    "password":"Surya@413"
+}
+
+###
+POST http://localhost:3000/users/login/
+Content-Type: application/json
+
+{
+    "email":"sureshnayak6695@gmail.com",
+    "password":"Surya@413"
+}
+
+###
+GET http://localhost:3000/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+###
+POST http://localhost:3000/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+
+{
+    "title":"gym",
+    "content":"leg day",
+    "category":"workout"
+}
+
+###
+PUT http://localhost:3000/notes/10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+{
+    "title":"Toor",
+    "content":"enjoy holiday heartfully",
+    "category":"toor"
+}
+
+###
+DELETE http://localhost:3000/notes/10/
+Content-Type:application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+###
+DELETE http://localhost:3000/notes/
+Content-Type:application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+
+###
+PATCH http://localhost:3000/notes/12/pin
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+
+{
+  "pinned": true
+}
+
+###
+
+PATCH http://localhost:3000/notes/12/archive
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+
+{
+  "archived": true
+}
