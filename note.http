@@ -1,4 +1,4 @@
-POST http://localhost:3000/users/register/
+POST http://localhost:3000/users/register
 Content-Type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3000/users/login/
+POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
@@ -18,12 +18,16 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/notes
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
 ###
-POST http://localhost:3000/notes
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
 
+
+GET http://localhost:3000/notes/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQwNDc0NjY0fQ.gvrZ3URsRe050WOjZjKVlD6phjW6RIFwkmgsxyn-G7w
+
+###
+POST http://localhost:3000/notes/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQwNDc0NjY0fQ.gvrZ3URsRe050WOjZjKVlD6phjW6RIFwkmgsxyn-G7w
 {
     "title":"gym",
     "content":"leg day",
@@ -33,7 +37,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxN
 ###
 PUT http://localhost:3000/notes/10
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQwNDc0NjY0fQ.gvrZ3URsRe050WOjZjKVlD6phjW6RIFwkmgsxyn-G7w
+
 {
     "title":"Toor",
     "content":"enjoy holiday heartfully",
@@ -41,18 +46,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxN
 }
 
 ###
-DELETE http://localhost:3000/notes/10/
+DELETE http://localhost:3000/notes/10
 Content-Type:application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQwNDc0NjY0fQ.gvrZ3URsRe050WOjZjKVlD6phjW6RIFwkmgsxyn-G7w
+
 ###
-DELETE http://localhost:3000/notes/
+DELETE http://localhost:3000/notes
 Content-Type:application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQwNDc0NjY0fQ.gvrZ3URsRe050WOjZjKVlD6phjW6RIFwkmgsxyn-G7w
 
 ###
 PATCH http://localhost:3000/notes/12/pin
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQwNDc0NjY0fQ.gvrZ3URsRe050WOjZjKVlD6phjW6RIFwkmgsxyn-G7w
 
 {
   "pinned": true
@@ -62,7 +68,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxN
 
 PATCH http://localhost:3000/notes/12/archive
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5NzgxMjA5fQ.wzH9EDo3H5PTshNyP-gfC19-QDgD1G9HSeta4IvEPCw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQwNDc0NjY0fQ.gvrZ3URsRe050WOjZjKVlD6phjW6RIFwkmgsxyn-G7w
 
 {
   "archived": true
